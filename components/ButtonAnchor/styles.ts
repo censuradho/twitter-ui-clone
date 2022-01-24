@@ -1,14 +1,23 @@
 import styled from 'styled-components'
 import { defaultTheme } from 'theme/template'
 
-export interface ButtonProps {
+
+export interface LinkProps {
   variant?: keyof typeof defaultTheme['buttons'];
   outline?: boolean;
   fullWidth?: boolean;
 }
 
-export const Button = styled.button<ButtonProps>`
+export const Link = styled.div<LinkProps>`
   padding: 0.75rem 0;
+
+  display: flex; 
+
+  a {
+    text-align: center;
+    flex: 1;
+  }
+
   background: ${({ theme, variant = 'primary', outline }) => 
     outline 
       ? theme.buttons[variant].outline.background

@@ -6,17 +6,18 @@ import BgImage from 'assets/lohp_1302x955.png'
 import * as Styles from 'styles/index'
 import { Flex } from 'styles/Flex'
 
-import { Button } from 'components'
+import { ButtonAnchor } from 'components'
 
 import { useTheme } from 'hooks'
+import { routePaths } from 'constants/routes'
 
 const Home: NextLayoutComponentType = () => {
   const { colors } = useTheme()
 
   return (
     <Styles.Main>
-      <Styles.FormContainer>
-        <form>
+      <Styles.SectionContainer>
+        <section>
           <Flex
             column
             gap={2}
@@ -29,7 +30,7 @@ const Home: NextLayoutComponentType = () => {
               column
               gap={1}
             >
-              <Button fullWidth>Inscreva-se com o número de celular...</Button>
+              <ButtonAnchor href="/" fullWidth>Inscreva-se com o número de celular...</ButtonAnchor>
               <Styles.Policies>Ao se inscrever, você concorda com os <Styles.Link href="/">Termos de Serviço</Styles.Link> e a <Styles.Link href="/">Políticas de privacidade</Styles.Link>, incluindo o <Styles.Link href="/">Uso dos cookies</Styles.Link></Styles.Policies>
             </Flex>
 
@@ -40,12 +41,12 @@ const Home: NextLayoutComponentType = () => {
             gap={1}
           >
             <Styles.Answer>Já tem uma conta?</Styles.Answer>
-            <Button fullWidth outline>Entrar</Button>
+            <ButtonAnchor href={routePaths.home} fullWidth outline>Entrar</ButtonAnchor>
 
           </Flex>
-        </form>
+        </section>
 
-      </Styles.FormContainer>
+      </Styles.SectionContainer>
       <Styles.ImageContainer>
         <Styles.Img layout="fill" src={BgImage} />
         <Logo width={250} height={250} fill="#fff" />
