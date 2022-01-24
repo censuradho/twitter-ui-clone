@@ -4,8 +4,8 @@ export const buttons = {
   primary: {
     border: 'none',
     borderColor: 'none',
-    background: 'none',
-    color: colors.primary,
+    background: colors.primary,
+    color: colors.white,
     fontWeight: '600',
     hoverBackground: 'none',
 
@@ -17,5 +17,5 @@ export const buttons = {
       fontWeight: '600',
       hoverBackground: 'rgba(29, 155, 240, 0.1)'
     }
-  }
+  },
 }
