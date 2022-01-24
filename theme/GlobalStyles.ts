@@ -33,7 +33,7 @@ const GloalStyles = createGlobalStyle`
     
     h2 {
       font-size: 2.2rem;
-      line-height: 75px;
+      line-height: 47px;
     }
   }
 `

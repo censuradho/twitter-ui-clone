@@ -48,7 +48,7 @@ const Home: NextLayoutComponentType = () => {
       </Styles.FormContainer>
       <Styles.ImageContainer>
         <Styles.Img layout="fill" src={BgImage} />
-        <Logo width={100} height={100} fill="#fff" />
+        <Logo width={250} height={250} fill="#fff" />
       </Styles.ImageContainer>
     </Styles.Main>
   )

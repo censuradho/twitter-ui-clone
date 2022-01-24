@@ -3,17 +3,13 @@ import styled from 'styled-components'
 import LinkNext from 'next/link'
 import Image from 'next/image'
 
-export const Main = styled.main`
-  width: 100%;
-`
-
 export const FormContainer = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.4rem;
+  padding: 2rem;
 
   h1 {
     margin-top: 2.3rem;
@@ -64,5 +60,36 @@ export const ImageContainer = styled.div`
 
   svg {
     position: absolute;
+  }
+  
+`
+
+export const Main = styled.main`
+  width: 100%;
+
+  @media (min-width: 62.5rem) {
+    display: flex;
+    flex-direction: row-reverse;
+
+    ${FormContainer} {
+      width: 70%;
+    }
+    ${ImageContainer} {
+      flex: 1;
+      min-height: 100vh;
+    }
+  }
+
+  @media (min-width: 75rem) {
+    display: flex;
+    flex-direction: row-reverse;
+
+    ${FormContainer} {
+      width: 50%;
+    }
+
+    ${ImageContainer} {
+      width: 50%
+    }
   }
 `

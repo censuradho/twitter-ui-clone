@@ -1,4 +1,5 @@
 import { colors } from "./colors";
+import { darken } from 'polished'
 
 export const buttons = {
   primary: {
@@ -7,7 +8,7 @@ export const buttons = {
     background: colors.primary,
     color: colors.white,
     fontWeight: '600',
-    hoverBackground: 'none',
+    hoverBackground: darken(.15, colors.primary),
 
     outline: {
       border: '1px',
