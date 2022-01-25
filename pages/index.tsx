@@ -11,7 +11,7 @@ import { ButtonAnchor } from 'components'
 import { useTheme } from 'hooks'
 import { routePaths } from 'constants/routes'
 
-const Home: NextLayoutComponentType = () => {
+const Welcome: NextLayoutComponentType = () => {
   const { colors } = useTheme()
 
   return (
@@ -55,5 +55,5 @@ const Home: NextLayoutComponentType = () => {
   )
 }
 
-export default Home
+export default Welcome
 

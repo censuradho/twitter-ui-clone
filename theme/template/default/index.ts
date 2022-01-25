@@ -1,8 +1,10 @@
+import { buttonRound } from './buttonRound'
 import { buttons } from './buttons'
 import { colors } from './colors'
 
 export const defaultTheme = {
   colors,
-  blur: 'blur(12px)',
-  buttons
+  blur: '12px',
+  buttons,
+  buttonRound,
 }

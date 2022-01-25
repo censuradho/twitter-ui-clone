@@ -9,12 +9,12 @@ export interface LinkProps {
 }
 
 export const Link = styled.div<LinkProps>`
-  padding: 0.75rem 0;
 
   display: flex; 
 
   a {
     text-align: center;
+    padding: 0.75rem 0;
     flex: 1;
   }
 

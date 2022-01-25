@@ -8,7 +8,9 @@ const GloalStyles = createGlobalStyle`
   /* word-break: break-all; */
 }
   button {
-    cursor: pointer
+    cursor: pointer;
+    background: none;
+    border: none;
   }
 
   h1 {

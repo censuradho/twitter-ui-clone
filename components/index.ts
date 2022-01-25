@@ -1,2 +1,5 @@
 export * from './Button'
 export * from './ButtonAnchor'
+export * from './ButtonRound'
+export * from './ButtonIcon'
+export * from './Icons'
