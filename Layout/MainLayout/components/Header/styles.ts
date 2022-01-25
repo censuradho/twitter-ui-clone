@@ -11,6 +11,7 @@ export const Container = styled.div`
   width: 100%;
   height: 3.12rem;
   padding: 0rem 1rem;
+  gap: 1rem;
 `
 
 export const Title = styled.strong`
@@ -20,5 +21,9 @@ export const Title = styled.strong`
 `
 
 export const Right = styled.div`
+
+`
+
+export const Left = styled.div`
 
 `

@@ -5,18 +5,19 @@ import { icons } from './icons'
 
 interface IconsProps  {
   name: keyof typeof icons;
+  size?: number;
   icon?: {
     fill?: string;
     width?: number;
-    height?: number
+    height?: number;
   }
 }
 
-function BaseIcons ({ name, icon }: IconsProps) {
+function BaseIcons ({ name, size, icon }: IconsProps) {
   const Component = icons[name]
 
   return (
-    <Component width={24} height={24} {...icon}  />
+    <Component size={size || 24}  width={size || 24} height={size || 24} {...icon}  />
   )
 }
 
