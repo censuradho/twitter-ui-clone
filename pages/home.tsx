@@ -7,13 +7,16 @@ import * as Styles from 'styles/Home'
 
 import { MainLayout } from 'Layout'
 import { Avatar, ButtonIcon } from 'components'
+import { useSelector } from 'react-redux'
 
 const Home: NextLayoutComponentType = () => {
+  const user = useSelector(value => value.user)
+
   return (
     <>
       <Header 
         title="Página inicial" 
-        // left={<Avatar size={2.5} /> }
+        left={<Avatar size={2.5} src={user?.avatar_url} /> }
         right={<ButtonIcon size={2.3} name="star" />} 
       />
       <Styles.Main>

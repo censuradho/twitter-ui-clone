@@ -5,6 +5,8 @@ import type { AppProps} from 'next/app'
 import ThemeProvider from 'theme'
 import GloalStyles from 'theme/GlobalStyles';
 
+import { storeWrapper } from 'store'
+
 import '../styles/globals.css'
 
 type NextPageWithLayout = NextPage & {
@@ -27,4 +29,4 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
   )
 }
 
-export default App
+export default storeWrapper.withRedux(App);
