@@ -1,3 +1,7 @@
+import { ComponentType } from 'react'
+
 export const routePaths = {
-  home: '/home'
+  home: '/home',
+  welcome: '/',
 }
+

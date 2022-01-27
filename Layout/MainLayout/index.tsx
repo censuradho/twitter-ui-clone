@@ -9,6 +9,7 @@ interface MainLayoutProps {
 }
 
 export function MainLayout ({ children }: MainLayoutProps) {
+
   return (
     <Styles.Container>
       <Navigation /> 

@@ -5,5 +5,6 @@ export const colors = {
   foreground500: 'rgba(255, 255, 255, 0.85)',
   color: 'rgb(0, 0, 0)',
   white: '#fff',
-  body: 'rgb(83, 100, 113)'
+  body: 'rgb(83, 100, 113)',
+  black: '#000',
 }
