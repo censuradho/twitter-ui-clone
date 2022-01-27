@@ -5,6 +5,8 @@ import { ButtonIcon, Avatar, Icons } from "components";
 import { Flex } from "styles/Flex";
 
 import * as Styles from './styles'
+import { useTheme } from "hooks";
+import { darken, lighten } from "polished";
 
 interface TweetCard {
   username: string;
@@ -16,6 +18,7 @@ interface TweetCard {
   };
 }
 function BaseTweetCard ({ created_at, nick, username, avatar_url }: TweetCard) {
+  const { colors } = useTheme()
 
   return (
     <Styles.Article>
@@ -29,19 +32,27 @@ function BaseTweetCard ({ created_at, nick, username, avatar_url }: TweetCard) {
           </Flex>
           <ButtonIcon size={2} name="horizontalDoots"/>
         </Styles.Header>
+        <Styles.Body></Styles.Body>
         <Styles.Footer>
-          <button>
-            <Icons size={18} name="dialog" />
-          </button>
-          <button>
-            <Icons size={18} name="retweet" />
-          </button>
-          <button>
-            <Icons size={18} name="heart" />
-          </button>
-          <button>
-            <Icons size={18} name="share" />
-          </button>
+          <ButtonIcon 
+            hoverActiveColor={lighten(.4, colors.primary)} 
+            iconHoverActiveColor={colors.primary} 
+            size={2} 
+            name="dialog"
+          />
+          <ButtonIcon 
+            hoverActiveColor="rgba(0, 186, 124, 0.1)"
+            iconHoverActiveColor="rgba(0, 186, 124, 1)"
+            size={2} 
+            name="retweet"
+          />
+          <ButtonIcon size={2} name="heart"/>
+          <ButtonIcon 
+            hoverActiveColor={lighten(.4, colors.primary)} 
+            iconHoverActiveColor={colors.primary}
+            size={2} 
+            name="share"
+          />
         </Styles.Footer>
       </Flex>
 

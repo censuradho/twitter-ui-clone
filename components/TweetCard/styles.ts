@@ -30,13 +30,15 @@ export const Ref = styled(LinkNext)`
 export const CreateAt = styled.span`
   font-size: inherit;
   color: inherit;
-
-  
 `
 export const Username = styled.strong`
   font-size: inherit;
   color: ${({ theme }) => theme.colors.color};
   font-weight: 700;
+`
+
+export const Body = styled.div`
+  height: 4rem;
 `
 
 export const Footer = styled.div`
@@ -45,7 +47,15 @@ export const Footer = styled.div`
   justify-content: space-between;
   padding-top: 1rem;
 
+  button:nth-child(1):hover {
+    /* svg {
+    fill: ${({ theme }) => theme.colors.primary};
+    } */
+  }
+
   svg {
     fill: ${({ theme }) => theme.colors.body};
   }
+
 `
+
