@@ -3,7 +3,6 @@ import type { NextPage, } from 'next';
 import type { AppProps} from 'next/app'
 
 import ThemeProvider from 'theme'
-import GloalStyles from 'theme/GlobalStyles';
 
 import { storeWrapper } from 'store'
 
@@ -21,11 +20,12 @@ type AppPropsWithLayout = AppProps & {
 function App({ Component, pageProps }: AppPropsWithLayout) {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page)
-  return getLayout(
+  const withLayout = getLayout(<Component {...pageProps} />)
+
+  return (
     <ThemeProvider>
-      <GloalStyles />
-    <Component {...pageProps} />
-  </ThemeProvider>
+      {withLayout}
+    </ThemeProvider>
   )
 }
 

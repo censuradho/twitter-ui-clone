@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 
+import { Navigation } from './components'
 
 import * as Styles from './styles'
 
@@ -9,7 +10,8 @@ interface MainLayoutProps {
 
 export function MainLayout ({ children }: MainLayoutProps) {
   return (
-    <Styles.Container>  
+    <Styles.Container>
+      <Navigation /> 
       <Styles.Wrapper>
         {children}
       </Styles.Wrapper>
