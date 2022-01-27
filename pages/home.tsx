@@ -14,6 +14,7 @@ const users = [
   {
     username: 'Beca Maia',
     created_at: '',
+    perfil_link: '#',
     avatart_url: 'https://pbs.twimg.com/profile_images/1433095560878243844/X3LmnTXW_x96.jpg',
     nick: {
       href: '#',
@@ -23,6 +24,7 @@ const users = [
   {
     username: 'Gustavo Leite',
     created_at: '',
+    perfil_link: '#',
     avatart_url: 'https://pbs.twimg.com/profile_images/1252288987265449985/g4EiqYMM_bigger.jpg',
     nick: {
       href: '#',
@@ -32,6 +34,7 @@ const users = [
   {
     username: 'Too Lazy to Raise Hell',
     created_at: '',
+    perfil_link: '#',
     avatart_url: 'https://pbs.twimg.com/profile_images/1483877994481557506/dEL8UxU2_bigger.jpg',
     nick: {
       href: '#',
@@ -41,6 +44,7 @@ const users = [
   {
     username: 'Beca Maia',
     created_at: '',
+    perfil_link: '#',
     avatart_url: 'https://pbs.twimg.com/profile_images/1433095560878243844/X3LmnTXW_x96.jpg',
     nick: {
       href: '#',
@@ -50,6 +54,7 @@ const users = [
   {
     username: 'Gustavo Leite',
     created_at: '',
+    perfil_link: '#',
     avatart_url: 'https://pbs.twimg.com/profile_images/1252288987265449985/g4EiqYMM_bigger.jpg',
     nick: {
       href: '#',
@@ -59,6 +64,7 @@ const users = [
   {
     username: 'Too Lazy to Raise Hell',
     created_at: '',
+    perfil_link: '#',
     avatart_url: 'https://pbs.twimg.com/profile_images/1483877994481557506/dEL8UxU2_bigger.jpg',
     nick: {
       href: '#',
@@ -68,6 +74,7 @@ const users = [
   {
     username: 'Letícia Cavalcanti',
     created_at: '',
+    perfil_link: '#',
     avatart_url: 'https://pbs.twimg.com/profile_images/1480329110723481600/UnngW0gl_400x400.jpg',
     nick: {
       href: '#',
@@ -77,6 +84,7 @@ const users = [
   {
     username: 'Letícia Cavalcanti',
     created_at: '',
+    perfil_link: '#',
     avatart_url: 'https://pbs.twimg.com/profile_images/1480329110723481600/UnngW0gl_400x400.jpg',
     nick: {
       href: '#',
@@ -86,6 +94,7 @@ const users = [
   {
     username: 'Too Lazy to Raise Hell',
     created_at: '',
+    perfil_link: '#',
     avatart_url: 'https://pbs.twimg.com/profile_images/1483877994481557506/dEL8UxU2_bigger.jpg',
     nick: {
       href: '#',
@@ -95,6 +104,7 @@ const users = [
   {
     username: 'Beca Maia',
     created_at: '',
+    perfil_link: '#',
     avatart_url: 'https://pbs.twimg.com/profile_images/1433095560878243844/X3LmnTXW_x96.jpg',
     nick: {
       href: '#',
@@ -104,6 +114,7 @@ const users = [
   {
     username: 'Letícia Cavalcanti',
     created_at: '',
+    perfil_link: '#',
     avatart_url: 'https://pbs.twimg.com/profile_images/1480329110723481600/UnngW0gl_400x400.jpg',
     nick: {
       href: '#',
@@ -113,6 +124,7 @@ const users = [
   {
     username: 'Too Lazy to Raise Hell',
     created_at: '',
+    perfil_link: '#',
     avatart_url: 'https://pbs.twimg.com/profile_images/1483877994481557506/dEL8UxU2_bigger.jpg',
     nick: {
       href: '#',
@@ -125,7 +137,8 @@ const Home: NextLayoutComponentType = () => {
 
   const renderUsers = users.map((value, index) => (
     <TweetCard 
-      key={index} 
+      key={index}
+      perfil_link={value.perfil_link}
       avatar_url={value.avatart_url}
       username={value.username}
       created_at={value.created_at}

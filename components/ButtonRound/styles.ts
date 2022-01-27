@@ -22,7 +22,7 @@ export const Button = styled.button<ButtonProps>`
   align-items: center;
   justify-content: center;
   background-color: ${({ theme, variant = 'base' }) => theme.buttonRound[variant].background};
-
+  padding: .5rem;
   transition: .2s;
   
   &:hover {

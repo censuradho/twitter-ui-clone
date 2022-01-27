@@ -12,6 +12,7 @@ export const Container = styled.div`
   height: 3.12rem;
   padding: 0rem 1rem;
   gap: 1rem;
+  z-index: 99;
 `
 
 export const Title = styled.strong`
