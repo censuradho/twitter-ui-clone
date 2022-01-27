@@ -1,13 +1,14 @@
-import { NextLayoutComponentType } from 'next'
 import { ReactElement } from 'react'
+import { NextLayoutComponentType } from 'next'
+import { useSelector } from 'react-redux'
 
 import { Header } from 'Layout/MainLayout/components'
 
 import * as Styles from 'styles/Home'
 
 import { MainLayout } from 'Layout'
-import { Avatar, ButtonIcon } from 'components'
-import { useSelector } from 'react-redux'
+
+import { Avatar, ButtonIcon, TwittCard } from 'components'
 
 const Home: NextLayoutComponentType = () => {
   const user = useSelector(value => value.user)
@@ -19,52 +20,15 @@ const Home: NextLayoutComponentType = () => {
         left={<Avatar size={2.5} src={user?.avatar_url} /> }
         right={<ButtonIcon size={2.3} name="star" />} 
       />
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
-      <h1>home</h1>
+      <TwittCard />
+      <TwittCard />
+      <TwittCard />
+      <TwittCard />
+      <TwittCard />
+      <TwittCard />
+      <TwittCard />
+      <TwittCard />
+      <TwittCard />
     </Styles.Main>
   )
 }

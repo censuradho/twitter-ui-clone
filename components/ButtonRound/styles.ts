@@ -22,7 +22,6 @@ export const Button = styled.button<ButtonProps>`
   background-color: ${({ theme, variant = 'base' }) => theme.buttonRound[variant].background};
 
   transition: .2s;
-  padding: .4rem;
   
   &:hover {
     background-color: ${({ theme, variant = 'base' }) => theme.buttonRound[variant].hoverBackground};
