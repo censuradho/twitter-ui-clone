@@ -6,16 +6,26 @@ import { Flex } from "styles/Flex";
 
 import * as Styles from './styles'
 
-function BaseTwittCard () {
+interface TweetCard {
+  username: string;
+  avatar_url: string;
+  created_at: string;
+  nick: {
+    label: string;
+    href: string
+  };
+}
+function BaseTweetCard ({ created_at, nick, username, avatar_url }: TweetCard) {
+
   return (
     <Styles.Article>
-      <Avatar size={2.7} src="https://pbs.twimg.com/profile_images/1433095560878243844/X3LmnTXW_x96.jpg"/>
+      <Avatar size={2.7} src={avatar_url} />
       <Flex flex={1} column>
         <Styles.Header>
           <Flex fullWidth alignItems="center" gap={.5} flex={1}>
-            <Styles.Username>jOSY</Styles.Username>
-            <Styles.Ref href="#"><a>@rebecamaia_P</a></Styles.Ref>
-            <Styles.CreateAt >15 h</Styles.CreateAt>
+            <Styles.Username>{username}</Styles.Username>
+            <Styles.Ref href={nick?.href}><a>{nick?.label}</a></Styles.Ref>
+            <Styles.CreateAt>{created_at}</Styles.CreateAt>
           </Flex>
           <ButtonIcon size={2} name="horizontalDoots"/>
         </Styles.Header>
@@ -39,4 +49,4 @@ function BaseTwittCard () {
   )
 }
 
-export const TwittCard = memo(BaseTwittCard)
+export const TweetCard = memo(BaseTweetCard)

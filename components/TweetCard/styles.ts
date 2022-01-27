@@ -36,7 +36,7 @@ export const CreateAt = styled.span`
 export const Username = styled.strong`
   font-size: inherit;
   color: ${({ theme }) => theme.colors.color};
-  font-weight: 800;
+  font-weight: 700;
 `
 
 export const Footer = styled.div`
