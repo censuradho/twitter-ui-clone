@@ -15,10 +15,10 @@ export const Container = styled.div`
   z-index: 99;
 `
 
-export const Title = styled.strong`
+export const Title = styled.div`
   font-size: 1.2rem;
-  display: inline-block;
   flex: 1;
+  font-weight: 700;
 `
 
 export const Right = styled.div`

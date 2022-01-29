@@ -7,7 +7,7 @@ import { ButtonIcon } from "components"
 import * as Styles from './styles'
 
 interface HeaderProps {
-  title: string
+  title: ReactNode
   right?: ReactNode | string
   left?: ReactNode | string
 }
