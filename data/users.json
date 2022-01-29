@@ -14,10 +14,55 @@
     "description": "Dev genin 🖥️ e manjador dos postpunk",
     "location": {
       "city": "Porto Alegre",
-      "Country": "Brasil"
+      "Country": "Brazil"
     },
     "followers": 16,
     "following": 64,
-    "tweets": []
+    "tweets": [],
+    "created_at": "2022-01-29T16:47:08.439Z"
+  },
+  {
+    "id": 1,
+    "username": "Too Lazy to Raise Hell",
+    "nick": "Juh__Rs",
+    "avatar_url": {
+      "large": "https://pbs.twimg.com/profile_images/1483877994481557506/dEL8UxU2_400x400.jpg",
+      "small": "https://pbs.twimg.com/profile_images/1483877994481557506/dEL8UxU2_reasonably_small.jpg"
+    },
+    "banner_url": {
+      "small": "https://pbs.twimg.com/profile_banners/82012667/1642619145/600x200",
+      "large": "https://pbs.twimg.com/profile_banners/82012667/1642619145/1500x500"
+    },
+    "description": "I love beer, horror movies, soccer, Hard Rock and Heavy Metal.Long live Rock n' Não respondo msgs, não leve a mal mas só tenho twitter pra reclamar.",
+    "location": {
+      "city": "Caxias do Sul",
+      "Country": "Brazil"
+    },
+    "followers": 884,
+    "following": 1.208,
+    "tweets": [],
+    "created_at": "2022-01-29T17:01:52.585Z"
+  },
+  {
+    "id": 1,
+    "username": "Valdi Dalla Rosa",
+    "nick": "ValdiDallaRosa",
+    "avatar_url": {
+      "large": "https://pbs.twimg.com/profile_images/1415138633993146370/uXMaQOcZ_400x400.jpg",
+      "small": "https://pbs.twimg.com/profile_images/1415138633993146370/uXMaQOcZ_200x200.jpg"
+    },
+    "banner_url": {
+      "small": "https://pbs.twimg.com/profile_banners/215742934/1511994735/1080x360",
+      "large": "https://pbs.twimg.com/profile_banners/215742934/1511994735/1500x500"
+    },
+    "description": "Baixista com :Rosa Tattooada / Frank Solari / Richard Powel",
+    "location": {
+      "city": "Porto Alegre",
+      "Country": "Brazil"
+    },
+    "followers": 878,
+    "following": 885,
+    "tweets": [],
+    "created_at": "2022-01-29T17:01:52.585Z"
   }
 ]

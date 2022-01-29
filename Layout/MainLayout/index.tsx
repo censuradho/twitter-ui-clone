@@ -12,6 +12,7 @@ export function MainLayout ({ children }: MainLayoutProps) {
 
   return (
     <Styles.Container>
+
       <Navigation /> 
       <Styles.Wrapper>
         {children}

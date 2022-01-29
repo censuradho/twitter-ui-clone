@@ -16,13 +16,13 @@ import { useRouter } from 'next/router'
 
 const users = [
   {
-    username: 'Beca Maia',
+    username: 'Valdi Dalla Rosa',
     created_at: '',
     perfil_link: '#',
-    avatart_url: 'https://pbs.twimg.com/profile_images/1433095560878243844/X3LmnTXW_x96.jpg',
+    avatart_url: 'https://pbs.twimg.com/profile_images/1415138633993146370/uXMaQOcZ_400x400.jpg',
     nick: {
       href: '#',
-      label: 'rebecamaia_R'
+      label: 'ValdiDallaRosa'
     }
   },
   {
@@ -46,13 +46,13 @@ const users = [
     }
   },
   {
-    username: 'Beca Maia',
+    username: 'Valdi Dalla Rosa',
     created_at: '',
     perfil_link: '#',
-    avatart_url: 'https://pbs.twimg.com/profile_images/1433095560878243844/X3LmnTXW_x96.jpg',
+    avatart_url: 'https://pbs.twimg.com/profile_images/1415138633993146370/uXMaQOcZ_400x400.jpg',
     nick: {
       href: '#',
-      label: 'rebecamaia_R'
+      label: 'ValdiDallaRosa'
     }
   },
   {
@@ -76,23 +76,13 @@ const users = [
     }
   },
   {
-    username: 'Letícia Cavalcanti',
+    username: 'Valdi Dalla Rosa',
     created_at: '',
     perfil_link: '#',
-    avatart_url: 'https://pbs.twimg.com/profile_images/1480329110723481600/UnngW0gl_400x400.jpg',
+    avatart_url: 'https://pbs.twimg.com/profile_images/1415138633993146370/uXMaQOcZ_400x400.jpg',
     nick: {
       href: '#',
-      label: 'l3llys'
-    }
-  },
-  {
-    username: 'Letícia Cavalcanti',
-    created_at: '',
-    perfil_link: '#',
-    avatart_url: 'https://pbs.twimg.com/profile_images/1480329110723481600/UnngW0gl_400x400.jpg',
-    nick: {
-      href: '#',
-      label: 'l3llys'
+      label: 'ValdiDallaRosa'
     }
   },
   {
@@ -105,36 +95,6 @@ const users = [
       label: 'Juh__Rs'
     }
   },
-  {
-    username: 'Beca Maia',
-    created_at: '',
-    perfil_link: '#',
-    avatart_url: 'https://pbs.twimg.com/profile_images/1433095560878243844/X3LmnTXW_x96.jpg',
-    nick: {
-      href: '#',
-      label: 'rebecamaia_R'
-    }
-  },
-  {
-    username: 'Letícia Cavalcanti',
-    created_at: '',
-    perfil_link: '#',
-    avatart_url: 'https://pbs.twimg.com/profile_images/1480329110723481600/UnngW0gl_400x400.jpg',
-    nick: {
-      href: '#',
-      label: 'l3llys'
-    }
-  },
-  {
-    username: 'Too Lazy to Raise Hell',
-    created_at: '',
-    perfil_link: '#',
-    avatart_url: 'https://pbs.twimg.com/profile_images/1483877994481557506/dEL8UxU2_bigger.jpg',
-    nick: {
-      href: '#',
-      label: 'Juh__Rs'
-    }
-  }
 ]
 
 const Home: NextLayoutComponentType = () => {

@@ -9,6 +9,8 @@ import DialogIcon from 'assets/dialog.svg'
 import RetweetIcon from 'assets/retweet.svg'
 import HeartIcon from 'assets/heart.svg'
 import ShareIcon from 'assets/shared.svg'
+import ScheduleIcon from 'assets/schedule.svg'
+import LocationIcon from 'assets/location.svg'
 
 import { MdArrowBack } from 'react-icons/md'
 
@@ -29,4 +31,6 @@ export const icons = {
   retweet: RetweetIcon as SVGAElement,
   heart: HeartIcon as SVGAElement,
   share: ShareIcon as SVGAElement,
+  schedule: ScheduleIcon as SVGAElement,
+  location: LocationIcon as SVGAElement,
 }

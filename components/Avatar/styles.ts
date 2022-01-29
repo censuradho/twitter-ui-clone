@@ -14,6 +14,7 @@ export const Container = styled.div<AvatarProps>`
   background-color: rgba(0, 0, 0, .2);
   overflow: hidden;
   position: relative;
+  transition: .2s;
   
   &:hover {
     filter: brightness(.8)

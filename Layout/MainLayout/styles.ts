@@ -6,6 +6,12 @@ export const Container = styled.div`
   width: 100%;
   flex-direction: column-reverse;
   background: transparent;
+
+  @media (min-width: 31.46rem) {
+    flex-direction: row;
+  }
+
+ 
 `
 
 export const Wrapper = styled.div`
