@@ -2,12 +2,14 @@ import { memo } from "react";
 import { lighten } from "polished";
 import LinkNext from 'next/link'
 
+
 import { ButtonIcon, Avatar, Icons } from "components";
 
 import { Flex } from "styles/Flex";
 
 import * as Styles from './styles'
 import { useTheme } from "hooks";
+import { GetStaticProps } from "next";
 
 interface TweetCard {
   onClick?: () => void;

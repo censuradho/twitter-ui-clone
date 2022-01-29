@@ -1,7 +1,8 @@
 import { ReactElement } from 'react'
-import { NextLayoutComponentType } from 'next'
+import { GetStaticProps, NextLayoutComponentType } from 'next'
 import LinkNext from 'next/link'
 import { useSelector } from 'react-redux'
+
 
 import { Header } from 'Layout/MainLayout/components'
 
@@ -21,7 +22,7 @@ const users = [
     avatart_url: 'https://pbs.twimg.com/profile_images/1433095560878243844/X3LmnTXW_x96.jpg',
     nick: {
       href: '#',
-      label: '@rebecamaia_R'
+      label: 'rebecamaia_R'
     }
   },
   {
@@ -31,7 +32,7 @@ const users = [
     avatart_url: 'https://pbs.twimg.com/profile_images/1252288987265449985/g4EiqYMM_bigger.jpg',
     nick: {
       href: '#',
-      label: '@Censuradho'
+      label: 'Censuradho'
     }
   },
   {
@@ -41,7 +42,7 @@ const users = [
     avatart_url: 'https://pbs.twimg.com/profile_images/1483877994481557506/dEL8UxU2_bigger.jpg',
     nick: {
       href: '#',
-      label: '@Juh__Rs'
+      label: 'Juh__Rs'
     }
   },
   {
@@ -51,7 +52,7 @@ const users = [
     avatart_url: 'https://pbs.twimg.com/profile_images/1433095560878243844/X3LmnTXW_x96.jpg',
     nick: {
       href: '#',
-      label: '@rebecamaia_R'
+      label: 'rebecamaia_R'
     }
   },
   {
@@ -61,7 +62,7 @@ const users = [
     avatart_url: 'https://pbs.twimg.com/profile_images/1252288987265449985/g4EiqYMM_bigger.jpg',
     nick: {
       href: '#',
-      label: '@Censuradho'
+      label: 'Censuradho'
     }
   },
   {
@@ -71,7 +72,7 @@ const users = [
     avatart_url: 'https://pbs.twimg.com/profile_images/1483877994481557506/dEL8UxU2_bigger.jpg',
     nick: {
       href: '#',
-      label: '@Juh__Rs'
+      label: 'Juh__Rs'
     }
   },
   {
@@ -81,7 +82,7 @@ const users = [
     avatart_url: 'https://pbs.twimg.com/profile_images/1480329110723481600/UnngW0gl_400x400.jpg',
     nick: {
       href: '#',
-      label: '@l3llys'
+      label: 'l3llys'
     }
   },
   {
@@ -91,7 +92,7 @@ const users = [
     avatart_url: 'https://pbs.twimg.com/profile_images/1480329110723481600/UnngW0gl_400x400.jpg',
     nick: {
       href: '#',
-      label: '@l3llys'
+      label: 'l3llys'
     }
   },
   {
@@ -101,7 +102,7 @@ const users = [
     avatart_url: 'https://pbs.twimg.com/profile_images/1483877994481557506/dEL8UxU2_bigger.jpg',
     nick: {
       href: '#',
-      label: '@Juh__Rs'
+      label: 'Juh__Rs'
     }
   },
   {
@@ -111,7 +112,7 @@ const users = [
     avatart_url: 'https://pbs.twimg.com/profile_images/1433095560878243844/X3LmnTXW_x96.jpg',
     nick: {
       href: '#',
-      label: '@rebecamaia_R'
+      label: 'rebecamaia_R'
     }
   },
   {
@@ -121,7 +122,7 @@ const users = [
     avatart_url: 'https://pbs.twimg.com/profile_images/1480329110723481600/UnngW0gl_400x400.jpg',
     nick: {
       href: '#',
-      label: '@l3llys'
+      label: 'l3llys'
     }
   },
   {
@@ -131,24 +132,25 @@ const users = [
     avatart_url: 'https://pbs.twimg.com/profile_images/1483877994481557506/dEL8UxU2_bigger.jpg',
     nick: {
       href: '#',
-      label: '@Juh__Rs'
+      label: 'Juh__Rs'
     }
   }
 ]
+
 const Home: NextLayoutComponentType = () => {
   const user = useSelector(value => value.user)
 
   const renderUsers = users.map((value, index) => (
     <TweetCard 
       key={index}
-      perfil_link={value.perfil_link}
+      perfil_link={value.nick.label}
       avatar_url={value.avatart_url}
       username={value.username}
       created_at={value.created_at}
       nick={{
         href: value.nick.href,
         label: value.nick.label
-      }}   
+     }}   
     />
   ))
 
@@ -171,5 +173,7 @@ Home.getLayout = (page: ReactElement) => {
     </MainLayout>
   )
 }
+
+
 
 export default Home

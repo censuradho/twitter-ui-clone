@@ -2,7 +2,7 @@
   {
     "id": 1,
     "username": "Gustavo Leite",
-    "nick": "@Censuradho",
+    "nick": "Censuradho",
     "avatar_url": {
       "large": "https://pbs.twimg.com/profile_images/1252288987265449985/g4EiqYMM_400x400.jpg",
       "small": "https://pbs.twimg.com/profile_images/1252288987265449985/g4EiqYMM_bigger.jpg"
@@ -17,6 +17,7 @@
       "Country": "Brasil"
     },
     "followers": 16,
-    "following": 64
+    "following": 64,
+    "tweets": []
   }
 ]
