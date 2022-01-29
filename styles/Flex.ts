@@ -27,7 +27,7 @@ export const Flex = styled.div<FlexProps>`
   flex-direction: ${props => (props.column ? 'column' : 'row')};
   gap: ${props => `${props.gap}rem` || 'stretch'};
 
-
+  position: relative;
   max-width: ${({ maxWidth }) =>
     maxWidth ? (typeof maxWidth === 'string' ? maxWidth : `${maxWidth}rem`) : 'none'};
   width: ${props =>

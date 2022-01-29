@@ -1,6 +1,8 @@
 import { useRouter } from "next/router"
 import { GetStaticProps, NextLayoutComponentType, InferGetStaticPropsType, GetStaticPaths } from "next"
 import { ReactElement } from "react"
+import ImageNext from 'next/image'
+
 import path from 'path'
 import fs from 'fs'
 
@@ -11,6 +13,7 @@ import { User } from "types/user"
 
 import * as Styles from 'styles/Perfil'
 import { Flex } from "styles/Flex"
+import { Avatar } from "components"
 
 const Perfil: NextLayoutComponentType<InferGetStaticPropsType<typeof getStaticProps>> = ({ data }) => {
 
@@ -25,7 +28,16 @@ const Perfil: NextLayoutComponentType<InferGetStaticPropsType<typeof getStaticPr
           <Styles.HeaderTweets>{`${data.tweets.length} Tweets`}</Styles.HeaderTweets>
         </Flex>
       )} />
-      <h1>{nickname}</h1>
+      <Styles.BannerContainer>
+        <ImageNext src={data.banner_url.small} layout="fill" alt="" />
+      </Styles.BannerContainer>
+      <Styles.Container>
+        <Flex>
+          <Styles.AvatarContainer>
+            <Avatar fill src={data.avatar_url.small} />
+          </Styles.AvatarContainer>
+        </Flex>
+      </Styles.Container>
     </Styles.Main>
   )
 }

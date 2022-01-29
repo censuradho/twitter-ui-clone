@@ -7,9 +7,9 @@ interface AvatarProps extends Styles.AvatarProps {
   src?: string
 }
 
-function BaseAvatar ({ src, size }: AvatarProps) {
+function BaseAvatar ({ src, ...props }: AvatarProps) {
   return (
-    <Styles.Container size={size}>
+    <Styles.Container {...props}>
       {src && <img src={src} alt="avatar" />}
     </Styles.Container>
   )
