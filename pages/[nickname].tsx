@@ -30,8 +30,12 @@ const Perfil: NextLayoutComponentType<InferGetStaticPropsType<typeof getStaticPr
         </Flex>
       )} />
       <Styles.BannerContainer>
-        <Styles.BannerImageSmall src={data.banner_url.small} layout="fill" alt="" />
-        <Styles.BannerImageLarge src={data.banner_url.large} layout="fill" alt="" />
+        {data.banner_url && (
+          <>
+            <Styles.BannerImageSmall src={data.banner_url.small} layout="fill" alt="" />
+            <Styles.BannerImageLarge src={data.banner_url.large} layout="fill" alt="" />
+          </>
+        )}
       </Styles.BannerContainer>
       <Styles.Container>
         <Flex>

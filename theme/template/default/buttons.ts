@@ -12,7 +12,7 @@ export const buttons = {
 
     outline: {
       border: '1px',
-      borderColor: 'rgb(207, 217, 222)',
+      borderColor: colors.foreground600,
       background: 'none',
       color: colors.primary,
       fontWeight: '600',

@@ -3,6 +3,7 @@ export const colors = {
   background: '#fff',
   foreground: 'rgb(239, 243, 244)',
   foreground500: 'rgba(255, 255, 255, 0.85)',
+  foreground600: 'rgb(207, 217, 222)',
   color: 'rgb(0, 0, 0)',
   white: '#fff',
   body: 'rgb(83, 100, 113)',
