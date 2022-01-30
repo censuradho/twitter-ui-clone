@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  background: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.85);
   position: sticky;
   top: 0;
-  background-color: transparent;
   display: flex;
   align-items: center;
   backdrop-filter: blur(12px);

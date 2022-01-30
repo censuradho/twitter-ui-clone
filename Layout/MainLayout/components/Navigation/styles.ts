@@ -1,13 +1,19 @@
 import styled from 'styled-components'
 
 interface BreakPointViewProps {
-  variant: 'small' | 'mediumn'
+  min?: 'small' | 'mediumn'
+  max?: 'small' | 'mediumn'
+  hidden?: boolean
 }
 export const BreakPointView = styled.div<BreakPointViewProps>`
-  display: none;
+  display: ${({ hidden }) => hidden ? 'none' : 'block'};
+  
+  @media (max-width: ${({ theme, max = 'mediumn' }) => theme.breakingPoints[max]}) {
+    display: ${({ hidden }) => hidden ? 'none' : 'block'};
+  };
 
-  @media (min-width: ${({ theme, variant }) => theme.breakingPoints[variant]}) {
-    display: block;
+  @media (min-width: ${({ theme, min = 'mediumn' }) => theme.breakingPoints[min]}) {
+    display: ${({ hidden }) => hidden ? 'none' : 'block'};;
   };
 `
 
@@ -23,7 +29,6 @@ export const Container = styled.div`
     width: 100%;
     max-width: 7rem;
     height: 100%;
-    border-right: 1px solid ${({ theme }) => theme.colors.foreground};
     border-top: none;
   }
 

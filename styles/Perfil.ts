@@ -4,6 +4,7 @@ import ImageNext from 'next/image'
 import { Avatar } from 'components'
 
 export const Main = styled.main`
+min-height: 1000px;
 `
 
 export const HeaderNick = styled.strong`

@@ -23,12 +23,15 @@ function BaseNavigation () {
   return (
     <Styles.Container>
       <Styles.Content>
-        <ButtonIcon 
-          hoverActiveColor={lighten(.4, colors.primary)} 
-          iconHoverActiveColor={colors.primary}
-          fill={colors.primary}
-          name="logo" 
-        />
+        <Styles.BreakPointView min="small" hidden>
+          <ButtonIcon 
+            hoverActiveColor={lighten(.4, colors.primary)} 
+            iconHoverActiveColor={colors.primary}
+            fill={colors.primary}
+            name="logo" 
+          />
+        </Styles.BreakPointView>
+
         <nav>
           <Styles.List>
             <Styles.Item isActive={router.pathname === routePaths.home}>
@@ -42,14 +45,16 @@ function BaseNavigation () {
               </LinkNext>
             </Styles.Item>
             <Styles.Item isActive={router.pathname === routePaths.welcome}>
-              <LinkNext href={routePaths.welcome}>
-                <Styles.Link >
-                  <Styles.IconContainer>
-                    <Icons name="home" />
-                  </Styles.IconContainer>
-                  <span>Página inicial</span>
-                </Styles.Link>
-              </LinkNext>
+              {/* <Styles.BreakPointView min="small" hidden>
+                <LinkNext href={routePaths.welcome}>
+                  <Styles.Link >
+                    <Styles.IconContainer>
+                      <Icons name="home" />
+                    </Styles.IconContainer>
+                    <span>Página inicial</span>
+                  </Styles.Link>
+                </LinkNext>
+              </Styles.BreakPointView> */}
             </Styles.Item>
             <Styles.Item isActive={router.pathname === routePaths.welcome}>
               <LinkNext href={routePaths.welcome}>
