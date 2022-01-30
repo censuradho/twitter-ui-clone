@@ -30,7 +30,9 @@ export const Container = styled.div`
   @media (min-width: ${({ theme }) => theme.breakingPoints.mediumn}) {
     display: flex;
     justify-content: flex-end;
-    max-width: 25%
+    max-width: 25%;
+    margin-left: auto;
+
   }
 `
 
@@ -91,6 +93,8 @@ export const Link = styled.a`
   }
 
   @media (min-width: ${({ theme }) => theme.breakingPoints.mediumn}) {
+  justify-content: flex-start;
+
     span {
       display: block;
     }
@@ -112,6 +116,7 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
     
     padding:  1rem;
 
@@ -125,5 +130,6 @@ export const Content = styled.div`
   @media (min-width: ${({ theme }) => theme.breakingPoints.mediumn}) {
     max-width: 16.8rem;
     align-items: flex-start;
+    margin: 0;
   }
 `

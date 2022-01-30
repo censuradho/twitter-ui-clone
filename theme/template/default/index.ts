@@ -11,6 +11,6 @@ export const defaultTheme = {
   link,
   breakingPoints: {
     small: '31.25rem',
-    mediumn: '40.3125rem'
+    mediumn: '54.9rem'
   }
 }
