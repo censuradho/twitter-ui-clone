@@ -8,4 +8,5 @@ export const colors = {
   white: '#fff',
   body: 'rgb(83, 100, 113)',
   black: '#000',
+  hover: 'rgba(0, 0, 0, .14)'
 }

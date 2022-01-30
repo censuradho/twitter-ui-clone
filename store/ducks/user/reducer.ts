@@ -3,7 +3,7 @@ import { Reducer } from "redux"
 import { USER_STATE, USER_TYPES } from './types'
 
 const baseState = {
-  avatar_url: 'https://github.com/censuradho.png'
+  avatar_url: 'https://pbs.twimg.com/profile_images/1252288987265449985/g4EiqYMM_bigger.jpg'
 }
 
 export const reducerUser: Reducer<USER_STATE> = (state = baseState, action) => {

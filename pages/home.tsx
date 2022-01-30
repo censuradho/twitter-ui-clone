@@ -118,7 +118,7 @@ const Home: NextLayoutComponentType = () => {
     <Styles.Main>
       <Header 
         title={<LinkNext href={routePaths.home}><a>Página inicial</a></LinkNext>} 
-        left={<Avatar size={2.5} src={user?.avatar_url} /> }
+        left={<Styles.Avatar size={2.5} src={user?.avatar_url} /> }
         right={<ButtonIcon size={2.3} name="star" />} 
       />
       {renderUsers}

@@ -1,8 +1,10 @@
 import { darken } from "polished"
 
+import { colors } from "./colors"
+
 export const buttonRound = {
   base: {
     background: 'none',
-    hoverBackground: darken(.1, 'rgba(0, 0, 0, .14)'),
+    hoverBackground: darken(.1, colors.hover),
   }
 }

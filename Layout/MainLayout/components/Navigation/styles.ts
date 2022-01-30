@@ -1,6 +1,14 @@
 import styled from 'styled-components'
 
-export const Container = styled.nav`
+
+export const MinMediumView = styled.div`
+  display: none;
+  @media(min-width: ${({ theme }) => theme.breakingPoints.mediumn}) {
+    display: block
+  }
+`
+
+export const Container = styled.div`
   width: 100%;
   height: 3.21rem;
   border-top: 1px solid ${({ theme }) => theme.colors.foreground};
@@ -50,11 +58,27 @@ export const Item = styled.li<{ isActive?: boolean }>`
   }
 `
 
+export const IconContainer = styled.div`
+  padding: .4rem;
+  border-radius: 50%;
+  &:hover {
+    background: ${({ theme }) => theme.colors.hover}
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakingPoints.mediumn}) {
+    &:hover {
+      background: none
+    }
+  }
+
+
+`
 export const Link = styled.a`
   display: flex;
   align-items: center;
   flex: 1;
   justify-content: center;
+  cursor: pointer;
 
   span {
     display: none;
@@ -70,14 +94,27 @@ export const Link = styled.a`
 export const Content = styled.div`
   width: 100%;
   height: 100%;
-  
   nav {
     width: 100%;
     height: 100%;
   }
 
-  @media (min-width: ${({ theme }) => theme.breakingPoints.mediumn}) {
+  @media (min-width: ${({ theme }) => theme.breakingPoints.small}) {
     max-width: max-content;
     padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding:  1rem;
+
+    nav {
+      flex: 1;
+    }
+
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakingPoints.mediumn}) {
+    max-width: max-content;
   }
 `
