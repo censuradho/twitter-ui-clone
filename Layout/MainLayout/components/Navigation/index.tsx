@@ -2,7 +2,7 @@ import { memo } from "react";
 import { useRouter } from 'next/router';
 import LinkNext from 'next/link'
 
-import { Avatar, ButtonRound, Icons } from "components";
+import { Avatar, ButtonIcon, ButtonRound, Icons } from "components";
 
 import { routePaths } from 'constants/routes';
 
@@ -11,6 +11,7 @@ import { useTheme } from 'hooks';
 import * as Styles from './styles'
 import { Flex } from "styles/Flex";
 import { useSelector } from "react-redux";
+import { lighten } from "polished";
 
 
 function BaseNavigation () {
@@ -22,6 +23,12 @@ function BaseNavigation () {
   return (
     <Styles.Container>
       <Styles.Content>
+        <ButtonIcon 
+          hoverActiveColor={lighten(.4, colors.primary)} 
+          iconHoverActiveColor={colors.primary}
+          fill={colors.primary}
+          name="logo" 
+        />
         <nav>
           <Styles.List>
             <Styles.Item isActive={router.pathname === routePaths.home}>

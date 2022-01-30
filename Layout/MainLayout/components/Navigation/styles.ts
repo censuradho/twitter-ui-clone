@@ -1,18 +1,22 @@
 import styled from 'styled-components'
 
-
-export const MinMediumView = styled.div`
+interface BreakPointViewProps {
+  variant: 'small' | 'mediumn'
+}
+export const BreakPointView = styled.div<BreakPointViewProps>`
   display: none;
-  @media(min-width: ${({ theme }) => theme.breakingPoints.mediumn}) {
-    display: block
-  }
+
+  @media (min-width: ${({ theme, variant }) => theme.breakingPoints[variant]}) {
+    display: block;
+  };
 `
+
 
 export const Container = styled.div`
   width: 100%;
   height: 3.21rem;
   border-top: 1px solid ${({ theme }) => theme.colors.foreground};
-  background: tomato;
+  /* background: tomato; */
 
 
   @media (min-width: ${({ theme }) => theme.breakingPoints.small}) {
@@ -34,7 +38,7 @@ export const List = styled.ul`
   display: flex;
   height: 100%;
   flex: 1;
-  background: #2EB086;
+  /* background: #2EB086; */
 
   @media (min-width: ${({ theme }) => theme.breakingPoints.small}) {
     height: auto;
@@ -79,9 +83,11 @@ export const Link = styled.a`
   flex: 1;
   justify-content: center;
   cursor: pointer;
+  gap: 1rem;
 
   span {
     display: none;
+    font-size: 1.4rem;
   }
 
   @media (min-width: ${({ theme }) => theme.breakingPoints.mediumn}) {
@@ -94,6 +100,7 @@ export const Link = styled.a`
 export const Content = styled.div`
   width: 100%;
   height: 100%;
+
   nav {
     width: 100%;
     height: 100%;
@@ -110,11 +117,13 @@ export const Content = styled.div`
 
     nav {
       flex: 1;
+      margin: 1.4rem 0;
     }
 
   }
 
   @media (min-width: ${({ theme }) => theme.breakingPoints.mediumn}) {
-    max-width: max-content;
+    max-width: 16.8rem;
+    align-items: flex-start;
   }
 `

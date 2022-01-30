@@ -7,6 +7,7 @@ type Theme = keyof (Pick<DefaultTheme, 'buttonRound'>)['buttonRound']
 
 export interface ButtonProps {
   size?: number
+  fill?: string;
   variant?: Theme
   hoverActiveColor?: string
   iconHoverActiveColor?: string
@@ -25,6 +26,10 @@ export const Button = styled.button<ButtonProps>`
   padding: .5rem;
   transition: .2s;
   
+  svg {
+    fill: ${({ fill }) => fill};
+    
+  }
   &:hover {
     background-color: ${({ theme, variant = 'base', hoverActiveColor }) => hoverActiveColor || theme.buttonRound[variant].hoverBackground};
 
