@@ -8,5 +8,9 @@ export const defaultTheme = {
   buttons,
   colors,
   buttonRound,
-  link
+  link,
+  breakingPoints: {
+    small: '31.25rem',
+    mediumn: '40.3125rem'
+  }
 }

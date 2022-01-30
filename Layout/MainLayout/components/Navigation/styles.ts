@@ -1,13 +1,38 @@
 import styled from 'styled-components'
 
-import LinkNext from 'next/link'
+export const Container = styled.nav`
+  width: 100%;
+  height: 3.21rem;
+  border-top: 1px solid ${({ theme }) => theme.colors.foreground};
+  background: tomato;
 
+
+  @media (min-width: ${({ theme }) => theme.breakingPoints.small}) {
+    width: 100%;
+    max-width: 7rem;
+    height: 100%;
+    border-right: 1px solid ${({ theme }) => theme.colors.foreground};
+    border-top: none;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakingPoints.mediumn}) {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 25%
+  }
+`
 
 export const List = styled.ul`
   display: flex;
   height: 100%;
   flex: 1;
-  /* background: #2EB086; */
+  background: #2EB086;
+
+  @media (min-width: ${({ theme }) => theme.breakingPoints.small}) {
+    height: auto;
+    gap: 1.2rem;
+    flex-direction: column;
+  }
 `
 
 export const Item = styled.li<{ isActive?: boolean }>`
@@ -16,48 +41,43 @@ export const Item = styled.li<{ isActive?: boolean }>`
   justify-content: center;
   width: 100%;
   height: 100%;
+
   svg {
     width: 1.75rem;
     height: 1.75rem;
     fill: ${({ isActive, theme }) => isActive ? theme.link.active.fill : theme.link.inactive.fill} !important;
     stroke: ${({ isActive, theme }) => isActive ? theme.link.active.stroke : theme.link.inactive.stroke};
-
   }
 `
 
-export const Link = styled(LinkNext)`
+export const Link = styled.a`
   display: flex;
   align-items: center;
   flex: 1;
   justify-content: center;
-`
 
-export const Container = styled.nav`
-  width: 100%;
-  height: 3.21rem;
-  border-top: 1px solid ${({ theme }) => theme.colors.foreground};
-  /* background: tomato; */
-
-
-  @media (min-width: 31.46rem) {
-    width: 100%;
-    max-width: 7rem;
-    height: 100%;
-    border-right: 1px solid ${({ theme }) => theme.colors.foreground};
-    border-top: none;
-
-
-    ${List} {
-      max-width: 88px;
-      display: flex;
-      flex-direction: column;
-    }
+  span {
+    display: none;
   }
 
-  @media (min-width: 40rem) {
-    max-width: 14rem;
-    display: flex;
-    justify-content: flex-end;
+  @media (min-width: ${({ theme }) => theme.breakingPoints.mediumn}) {
+    span {
+      display: block;
+    }
+  }
+`
+
+export const Content = styled.div`
+  width: 100%;
+  height: 100%;
   
+  nav {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakingPoints.mediumn}) {
+    max-width: max-content;
+    padding: 0 1rem;
   }
 `

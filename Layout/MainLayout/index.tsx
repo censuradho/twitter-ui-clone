@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Flex } from "styles/Flex";
 
 import { Navigation } from './components'
 
@@ -12,11 +13,12 @@ export function MainLayout ({ children }: MainLayoutProps) {
 
   return (
     <Styles.Container>
-
-      <Navigation /> 
-      <Styles.Wrapper>
-        {children}
-      </Styles.Wrapper>
+      <Styles.Content>
+        <Navigation /> 
+        <Styles.Wrapper>
+          {children}
+        </Styles.Wrapper>
+      </Styles.Content>
     </Styles.Container>
   )
 }

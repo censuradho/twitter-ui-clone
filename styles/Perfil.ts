@@ -28,6 +28,7 @@ export const BannerContainer = styled.div`
   height: 9rem;
   position: relative;
   background: ${({ theme }) => theme.colors.foreground600};
+  
   ${BannerImageLarge} {
     display: none;
   }
