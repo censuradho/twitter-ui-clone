@@ -32,8 +32,8 @@ const Perfil: NextLayoutComponentType<InferGetStaticPropsType<typeof getStaticPr
       <Styles.BannerContainer>
         {data.banner_url && (
           <>
-            <Styles.BannerImageSmall src={data.banner_url.small} layout="fill" alt="" />
-            <Styles.BannerImageLarge src={data.banner_url.large} layout="fill" alt="" />
+            <Styles.BannerImageSmall objectFit="cover" src={data.banner_url.small} layout="fill" alt="" />
+            <Styles.BannerImageLarge objectFit="cover" src={data.banner_url.large} layout="fill" alt="" />
           </>
         )}
       </Styles.BannerContainer>

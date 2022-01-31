@@ -76,9 +76,12 @@ function BaseNavigation () {
             </Styles.Item>
           </Styles.List>
         </nav>
-        <Styles.IconContainer>
-          <Avatar src={user?.avatar_url} />
-        </Styles.IconContainer>
+        <Styles.BreakPointView min="small" hidden>
+          <Styles.IconContainer>
+            <Avatar src={user?.avatar_url} />
+          </Styles.IconContainer>
+        </Styles.BreakPointView>
+
       </Styles.Content>
 
     </Styles.Container>
