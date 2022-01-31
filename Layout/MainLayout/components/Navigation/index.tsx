@@ -44,17 +44,47 @@ function BaseNavigation () {
                 </Styles.Link>
               </LinkNext>
             </Styles.Item>
-            <Styles.Item max="small" hidden isActive={router.pathname === routePaths.welcome}>
+            <Styles.Item max="small" hidden isActive={router.pathname === routePaths.home}>
+              <LinkNext href={routePaths.home}>
+                <Styles.Link>
+                  <Styles.IconContainer>
+                    <Icons name="hashtag" />
+                  </Styles.IconContainer>
+                  <span>Explorar</span>
+                </Styles.Link>
+              </LinkNext>
+            </Styles.Item>
+            <Styles.Item min="mediumn" isActive={router.pathname === routePaths.welcome}>
               <LinkNext href={routePaths.welcome}>
                 <Styles.Link >
                   <Styles.IconContainer>
-                    <Icons name="home" />
+                    <Icons name="search" />
                   </Styles.IconContainer>
                   <span>Página inicial</span>
                 </Styles.Link>
               </LinkNext>
             </Styles.Item>
-            <Styles.Item isActive={router.pathname === routePaths.welcome}>
+            <Styles.Item  isActive={router.pathname === routePaths.welcome}>
+              <LinkNext href={routePaths.welcome}>
+                <Styles.Link >
+                  <Styles.IconContainer>
+                    <Icons name="notification" />
+                  </Styles.IconContainer>
+                  <span>Notificações</span>
+                </Styles.Link>
+              </LinkNext>
+            </Styles.Item>
+            <Styles.Item min="mediumn"  isActive={router.pathname === routePaths.welcome}>
+              <LinkNext href={routePaths.welcome}>
+                <Styles.Link >
+                  <Styles.IconContainer>
+                    <Icons name="message" />
+                  </Styles.IconContainer>
+                  <span>Página inicial</span>
+                </Styles.Link>
+              </LinkNext>
+            </Styles.Item>
+            <Styles.Item max="mediumn"   isActive={router.pathname === routePaths.welcome}>
               <LinkNext href={routePaths.welcome}>
                 <Styles.Link>
                   <Styles.IconContainer>
@@ -64,7 +94,7 @@ function BaseNavigation () {
                 </Styles.Link>
               </LinkNext>
             </Styles.Item>
-            <Styles.Item isActive={router.pathname === routePaths.welcome}>
+            <Styles.Item max="mediumn" isActive={router.pathname === routePaths.welcome}>
               <LinkNext href={routePaths.welcome}>
                 <Styles.Link >
                   <Styles.IconContainer>
