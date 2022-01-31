@@ -1,22 +1,37 @@
 import styled from 'styled-components'
+import { defaultTheme } from 'theme/template/default'
+
+type BreakPoint = keyof typeof defaultTheme['breakingPoints']
 
 interface BreakPointViewProps {
-  min?: 'small' | 'mediumn'
-  max?: 'small' | 'mediumn'
+  min?: BreakPoint
+  max?: BreakPoint
   hidden?: boolean
 }
+
 export const BreakPointView = styled.div<BreakPointViewProps>`
   display: ${({ hidden }) => hidden ? 'none' : 'block'};
   
   @media (max-width: ${({ theme, max = 'mediumn' }) => theme.breakingPoints[max]}) {
-    display: ${({ hidden }) => hidden ? 'none' : 'block'};
+    display: ${({ hidden, max }) => !hidden && !!max ? 'none' : 'auto'};
   };
 
   @media (min-width: ${({ theme, min = 'mediumn' }) => theme.breakingPoints[min]}) {
-    display: ${({ hidden }) => hidden ? 'none' : 'block'};;
+    display: ${({ hidden, min }) => !hidden && !!min ? 'none' : 'block'};;
   };
 `
 
+export const BreakPointItem = styled.li<BreakPointViewProps>`
+  display: ${({ hidden }) => hidden ? 'none' : 'flex'};
+  
+  @media (max-width: ${({ theme, max = 'mediumn' }) => theme.breakingPoints[max]}) {
+    display: ${({ hidden, max }) => !hidden && !!max ? 'none' : 'auto'};
+  };
+
+  @media (min-width: ${({ theme, min = 'mediumn' }) => theme.breakingPoints[min]}) {
+    display: ${({ hidden, min }) => !hidden && !!min ? 'none' : 'flex'};;
+  };
+`
 
 export const Container = styled.div`
   width: 100%;
@@ -54,8 +69,7 @@ export const List = styled.ul`
   }
 `
 
-export const Item = styled.li<{ isActive?: boolean }>`
-  display: flex;
+export const Item = styled(BreakPointItem)<{ isActive?: boolean }>`
   align-items: center;
   justify-content: center;
   width: 100%;

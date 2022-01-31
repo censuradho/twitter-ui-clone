@@ -44,17 +44,15 @@ function BaseNavigation () {
                 </Styles.Link>
               </LinkNext>
             </Styles.Item>
-            <Styles.Item isActive={router.pathname === routePaths.welcome}>
-              {/* <Styles.BreakPointView min="small" hidden>
-                <LinkNext href={routePaths.welcome}>
-                  <Styles.Link >
-                    <Styles.IconContainer>
-                      <Icons name="home" />
-                    </Styles.IconContainer>
-                    <span>Página inicial</span>
-                  </Styles.Link>
-                </LinkNext>
-              </Styles.BreakPointView> */}
+            <Styles.Item max="small" hidden isActive={router.pathname === routePaths.welcome}>
+              <LinkNext href={routePaths.welcome}>
+                <Styles.Link >
+                  <Styles.IconContainer>
+                    <Icons name="home" />
+                  </Styles.IconContainer>
+                  <span>Página inicial</span>
+                </Styles.Link>
+              </LinkNext>
             </Styles.Item>
             <Styles.Item isActive={router.pathname === routePaths.welcome}>
               <LinkNext href={routePaths.welcome}>
