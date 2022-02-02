@@ -2,7 +2,7 @@ import { memo } from "react";
 import { useRouter } from 'next/router';
 import LinkNext from 'next/link'
 
-import { Avatar, ButtonIcon, ButtonRound, Icons } from "components";
+import { Avatar, Button, ButtonIcon, ButtonRound, Icons } from "components";
 
 import { routePaths } from 'constants/routes';
 
@@ -106,8 +106,13 @@ function BaseNavigation () {
             </Styles.Item>
           </Styles.List>
         </nav>
-        <Flex flex={1} justifyContent="center">
-          <ButtonIcon fill="#fff"  variant="primary" name="newTweet" />
+        <Flex flex={1} justifyContent="center" fullWidth >
+          <Styles.BreakPointView max="small" min="mediumn">
+            <ButtonIcon fill="#fff"  variant="primary" name="newTweet" />
+          </Styles.BreakPointView>
+          <Styles.BreakPointView max="mediumn" >
+            <Button fullWidth>Tweetar</Button>
+          </Styles.BreakPointView>
         </Flex>
         <Styles.BreakPointView min="small" hidden>
           <Styles.IconContainer>

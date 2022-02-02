@@ -30,6 +30,5 @@ export const Flex = styled.div<FlexProps>`
   position: relative;
   max-width: ${({ maxWidth }) =>
     maxWidth ? (typeof maxWidth === 'string' ? maxWidth : `${maxWidth}rem`) : 'none'};
-  width: ${props =>
-    (props.fullWidth ? '100%' : 'auto') || props.width ? `${props.width}rem` : 'auto'};
+  width: ${props => props.fullWidth ? '100%' : 'auto'}
 `;

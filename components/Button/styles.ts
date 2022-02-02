@@ -8,7 +8,8 @@ export interface ButtonProps {
 }
 
 export const Button = styled.button<ButtonProps>`
-  padding: 0.75rem 0;
+  padding: 1rem 0.75rem;
+  font-size: 1rem;
   background: ${({ theme, variant = 'primary', outline }) => 
     outline 
       ? theme.buttons[variant].outline.background
@@ -35,9 +36,9 @@ export const Button = styled.button<ButtonProps>`
 
   transition-duration: 0.2s;
 
-  border-radius: 20px;
+  border-radius: 30px;
 
-  min-width: 16.6250rem;
+  min-width: 10.6250rem;
   width: ${({ fullWidth }) => fullWidth ? '100%' : 'auto'};
 
   &:hover {

@@ -11,6 +11,7 @@ interface BreakPointViewProps {
 
 export const BreakPointView = styled.div<BreakPointViewProps>`
   display: ${({ hidden }) => hidden ? 'none' : 'block'};
+  width: 100%;
   
   @media (max-width: ${({ theme, max = 'mediumn' }) => theme.breakingPoints[max]}) {
     display: ${({ hidden, max }) => !hidden && !!max ? 'none' : 'auto'};
