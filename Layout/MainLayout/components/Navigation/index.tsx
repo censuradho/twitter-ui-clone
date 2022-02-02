@@ -139,10 +139,12 @@ function BaseNavigation () {
             <Styles.IconContainer>
               <Avatar src={user?.avatar_url} />
             </Styles.IconContainer>
-            <Flex column>
-              <Styles.Username>{user.username}</Styles.Username>
-              <Styles.Nickname>{`@${user.nickname}`}</Styles.Nickname>
-            </Flex>
+            <Styles.BreakPointView max="mediumn" hidden>
+              <Flex column>
+                <Styles.Username>{user.username}</Styles.Username>
+                <Styles.Nickname>{`@${user.nickname}`}</Styles.Nickname>
+              </Flex>
+            </Styles.BreakPointView>
           </Flex>
         </Styles.BreakPointView>
 
