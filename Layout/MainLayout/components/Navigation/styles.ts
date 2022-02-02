@@ -81,6 +81,15 @@ export const Item = styled(BreakPointItem)<{ isActive?: boolean }>`
     fill: ${({ isActive, theme }) => isActive ? theme.link.active.fill : theme.link.inactive.fill} !important;
     stroke: ${({ isActive, theme }) => isActive ? theme.link.active.stroke : theme.link.inactive.stroke};
   }
+
+  @media (min-width: ${({ theme }) => theme.breakingPoints.mediumn}) {
+    border-radius: 4rem;
+    transition: .2s;
+
+    &:hover {
+        background: ${({ theme }) => theme.colors.hover}
+      }
+  }
 `
 
 export const IconContainer = styled.div`
@@ -140,8 +149,8 @@ export const Content = styled.div`
     padding:  1rem;
 
     nav {
-      flex: 1;
       margin: 1.4rem 0;
+      height: auto;
     }
 
   }

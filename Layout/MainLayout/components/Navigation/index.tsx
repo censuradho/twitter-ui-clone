@@ -106,6 +106,9 @@ function BaseNavigation () {
             </Styles.Item>
           </Styles.List>
         </nav>
+        <Flex flex={1} justifyContent="center">
+          <ButtonIcon fill="#fff"  variant="primary" name="newTweet" />
+        </Flex>
         <Styles.BreakPointView min="small" hidden>
           <Styles.IconContainer>
             <Avatar src={user?.avatar_url} />

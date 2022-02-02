@@ -12,6 +12,7 @@ import ShareIcon from 'assets/shared.svg'
 import ScheduleIcon from 'assets/schedule.svg'
 import LocationIcon from 'assets/location.svg'
 import HashtagIcon from 'assets/hashtag.svg'
+import NewTweethtagIcon from 'assets/new-tweet.svg'
 
 import { MdArrowBack } from 'react-icons/md'
 
@@ -35,4 +36,5 @@ export const icons = {
   schedule: ScheduleIcon as SVGPropsComponent,
   location: LocationIcon as SVGPropsComponent,
   hashtag: HashtagIcon as SVGPropsComponent,
+  newTweet: NewTweethtagIcon as SVGPropsComponent,
 }

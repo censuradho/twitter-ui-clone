@@ -16,8 +16,8 @@ export interface ButtonProps {
 
 
 export const Button = styled.button<ButtonProps>`
-  width: ${({ size }) => `${size}rem`};
-  height: ${({ size }) => `${size}rem`};
+  width: ${({ size = 3 }) => `${size}rem`};
+  height: ${({ size = 3 }) => `${size}rem`};
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -27,8 +27,7 @@ export const Button = styled.button<ButtonProps>`
   transition: .2s;
   
   svg {
-    fill: ${({ fill }) => fill};
-    
+    fill: ${({ fill }) => fill} !important;
   }
   &:hover {
     background-color: ${({ theme, variant = 'base', hoverActiveColor }) => hoverActiveColor || theme.buttonRound[variant].hoverBackground};
