@@ -3,5 +3,7 @@ export enum USER_TYPES  {
 }
 
  export interface USER_STATE {
-  avatar_url?: string
+  avatar_url?: string;
+  nickname: string;
+  username: string;
  }

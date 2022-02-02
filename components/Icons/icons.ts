@@ -13,6 +13,10 @@ import ScheduleIcon from 'assets/schedule.svg'
 import LocationIcon from 'assets/location.svg'
 import HashtagIcon from 'assets/hashtag.svg'
 import NewTweethtagIcon from 'assets/new-tweet.svg'
+import PerfilIcon from 'assets/perfil.svg'
+import ListIcon from 'assets/list.svg'
+import MarkIcon from 'assets/mark.svg'
+import MoreIcon from 'assets/more.svg'
 
 import { MdArrowBack } from 'react-icons/md'
 
@@ -37,4 +41,8 @@ export const icons = {
   location: LocationIcon as SVGPropsComponent,
   hashtag: HashtagIcon as SVGPropsComponent,
   newTweet: NewTweethtagIcon as SVGPropsComponent,
+  perfil: PerfilIcon as SVGPropsComponent,
+  list: ListIcon as SVGPropsComponent,
+  mark: MarkIcon as SVGPropsComponent,
+  more: MoreIcon as SVGPropsComponent,
 }

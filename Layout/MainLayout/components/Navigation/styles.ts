@@ -65,7 +65,7 @@ export const List = styled.ul`
 
   @media (min-width: ${({ theme }) => theme.breakingPoints.small}) {
     height: auto;
-    gap: 1.2rem;
+    gap: .5rem;
     flex-direction: column;
   }
 `
@@ -118,7 +118,7 @@ export const Link = styled.a`
 
   span {
     display: none;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   @media (min-width: ${({ theme }) => theme.breakingPoints.mediumn}) {
@@ -161,4 +161,10 @@ export const Content = styled.div`
     align-items: flex-start;
     margin: 0;
   }
+`
+
+export const Username = styled.strong``
+
+export const Nickname = styled.span`
+
 `

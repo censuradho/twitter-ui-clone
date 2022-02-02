@@ -74,33 +74,53 @@ function BaseNavigation () {
                 </Styles.Link>
               </LinkNext>
             </Styles.Item>
-            <Styles.Item min="mediumn"  isActive={router.pathname === routePaths.welcome}>
+            <Styles.Item  isActive={router.pathname === routePaths.welcome}>
               <LinkNext href={routePaths.welcome}>
                 <Styles.Link >
                   <Styles.IconContainer>
                     <Icons name="message" />
                   </Styles.IconContainer>
-                  <span>Página inicial</span>
+                  <span>Mensagens</span>
                 </Styles.Link>
               </LinkNext>
             </Styles.Item>
-            <Styles.Item max="mediumn"   isActive={router.pathname === routePaths.welcome}>
+            <Styles.Item max="small"  isActive={router.pathname === routePaths.welcome}>
               <LinkNext href={routePaths.welcome}>
                 <Styles.Link>
                   <Styles.IconContainer>
-                    <Icons name="home" />
+                    <Icons name="mark" />
                   </Styles.IconContainer>
-                  <span>Página inicial</span>
+                  <span>Itens salvos</span>
                 </Styles.Link>
               </LinkNext>
             </Styles.Item>
-            <Styles.Item max="mediumn" isActive={router.pathname === routePaths.welcome}>
+            <Styles.Item max="small" isActive={router.pathname === routePaths.welcome}>
               <LinkNext href={routePaths.welcome}>
                 <Styles.Link >
                   <Styles.IconContainer>
-                    <Icons name="home" />
+                    <Icons name="list" />
                   </Styles.IconContainer>
-                  <span>Página inicial</span>
+                  <span>Listas</span>
+                </Styles.Link>
+              </LinkNext>
+            </Styles.Item>
+            <Styles.Item max="small" isActive={router.pathname === routePaths.welcome}>
+              <LinkNext href={routePaths.welcome}>
+                <Styles.Link >
+                  <Styles.IconContainer>
+                    <Icons name="perfil" />
+                  </Styles.IconContainer>
+                  <span>Perfil</span>
+                </Styles.Link>
+              </LinkNext>
+            </Styles.Item>
+            <Styles.Item max="small" isActive={router.pathname === routePaths.welcome}>
+              <LinkNext href={routePaths.welcome}>
+                <Styles.Link >
+                  <Styles.IconContainer>
+                    <Icons name="more" />
+                  </Styles.IconContainer>
+                  <span>Mais</span>
                 </Styles.Link>
               </LinkNext>
             </Styles.Item>
@@ -115,9 +135,15 @@ function BaseNavigation () {
           </Styles.BreakPointView>
         </Flex>
         <Styles.BreakPointView min="small" hidden>
-          <Styles.IconContainer>
-            <Avatar src={user?.avatar_url} />
-          </Styles.IconContainer>
+          <Flex gap={1} alignItems="center">
+            <Styles.IconContainer>
+              <Avatar src={user?.avatar_url} />
+            </Styles.IconContainer>
+            <Flex column>
+              <Styles.Username>{user.username}</Styles.Username>
+              <Styles.Nickname>{`@${user.nickname}`}</Styles.Nickname>
+            </Flex>
+          </Flex>
         </Styles.BreakPointView>
 
       </Styles.Content>
