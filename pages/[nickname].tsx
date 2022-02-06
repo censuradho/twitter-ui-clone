@@ -8,7 +8,7 @@ import path from 'path'
 import fs from 'fs'
 
 import { MainLayout } from "Layout"
-import { Header } from "Layout/MainLayout/components"
+import { Aside, Header } from "Layout/MainLayout/components"
 
 import { User } from "types/user"
 
@@ -113,6 +113,9 @@ Perfil.getLayout = (page: ReactElement) => {
   return (
     <MainLayout>
       {page}
+      <Aside>
+        <h1>.</h1>
+      </Aside>
     </MainLayout>
   )
 }

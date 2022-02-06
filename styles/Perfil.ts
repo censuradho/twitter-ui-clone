@@ -4,7 +4,8 @@ import ImageNext from 'next/image'
 import { Avatar } from 'components'
 
 export const Main = styled.main`
-min-height: 1000px;
+  min-height: 1000px;
+  width: 100%;
 `
 
 export const HeaderNick = styled.strong`
@@ -35,7 +36,7 @@ export const BannerContainer = styled.div`
   }
 
   @media (min-width: 500px) {
-    height: 22rem;
+    height: 20rem;
 
     ${BannerImageLarge} {
       display: block;
