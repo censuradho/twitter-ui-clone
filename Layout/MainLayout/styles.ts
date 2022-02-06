@@ -19,11 +19,13 @@ export const Content = styled.div`
 export const Wrapper = styled.div`
   flex: 1;
   width: 100%;
-  overflow: auto;
-
+  overflow-y: auto;
+  display: flex;
+  align-items: flex-start;
   
   @media (min-width: ${({ theme }) => theme.breakingPoints.small}) {
     border-right: 1px solid ${({ theme }) => theme.colors.foreground};
     border-left: 1px solid ${({ theme }) => theme.colors.foreground};
   }
+
 `
