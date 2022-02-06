@@ -9,6 +9,8 @@ export const Container = styled.div`
   backdrop-filter: blur(12px);
   width: 100%;
   height: 3.12rem;
+  border-left: 1px solid ${({ theme }) => theme.colors.foreground};
+  border-right: 1px solid ${({ theme }) => theme.colors.foreground};
   padding: 0rem 1rem;
   gap: 1rem;
   z-index: 99;
