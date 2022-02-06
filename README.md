@@ -17,3 +17,20 @@ I challenged myself to create some twitter interface screens using React.js
 - [ ] Sign In
 - [ ] Home
 - [ ] Perfil
+
+## Requirements
+
+- [Node.js](https://nodejs.org/en/download/)
+
+
+## Installation
+
+```bash
+npm install
+```
+
+or...
+
+```bash
+yarn install
+```
