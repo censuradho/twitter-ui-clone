@@ -130,7 +130,9 @@ Home.getLayout = (page: ReactElement) => {
   return (
     <MainLayout>
       {page}
-      <Aside />
+      <Aside>
+        <h1>.</h1>
+      </Aside>
     </MainLayout>
   )
 }
