@@ -12,6 +12,7 @@ import { Header, Aside } from 'Layout/MainLayout/components'
 import { WhatsHappening, WhoFollow } from 'components/pages/home'
 
 import { routePaths } from 'constants/routes'
+import { ReactGA } from 'provider/ReactGA'
 
 const users = [
   {
@@ -127,13 +128,15 @@ const Home: NextLayoutComponentType = () => {
 
 Home.getLayout = (page: ReactElement) => {
   return (
-    <MainLayout>
-      {page}
-      <Aside>
-        <WhatsHappening />
-        <WhoFollow />
-      </Aside>
-    </MainLayout>
+    <ReactGA>
+      <MainLayout>
+        {page}
+        <Aside>
+          <WhatsHappening />
+          <WhoFollow />
+        </Aside>
+      </MainLayout>
+    </ReactGA>
   )
 }
 
