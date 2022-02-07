@@ -14,9 +14,9 @@ I challenged myself to create some twitter interface screens using React.js
 ## Screens
 
 - [x] Welcome
-- [ ] Sign In
-- [ ] Home
-- [ ] Perfil
+- [x] Sign In
+- [x] Home
+- [x] Perfil
 
 ## Requirements
 
