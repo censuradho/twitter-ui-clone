@@ -115,20 +115,22 @@ const Home: NextLayoutComponentType = () => {
   ))
 
   return (
-    <Styles.Main> 
-      <Header 
-        title={<LinkNext href={routePaths.home}><a>Página inicial</a></LinkNext>} 
-        left={<Styles.Avatar size={2.5} src={user?.avatar_url} /> }
-        right={<ButtonIcon size={2.3} name="star" />} 
-      />
-      {renderUsers}
-    </Styles.Main>
+    <ReactGA>
+      <Styles.Main> 
+        <Header 
+          title={<LinkNext href={routePaths.home}><a>Página inicial</a></LinkNext>} 
+          left={<Styles.Avatar size={2.5} src={user?.avatar_url} /> }
+          right={<ButtonIcon size={2.3} name="star" />} 
+        />
+        {renderUsers}
+      </Styles.Main>
+    </ReactGA>
+
   )
 }
 
 Home.getLayout = (page: ReactElement) => {
   return (
-    <ReactGA>
       <MainLayout>
         {page}
         <Aside>
@@ -136,7 +138,6 @@ Home.getLayout = (page: ReactElement) => {
           <WhoFollow />
         </Aside>
       </MainLayout>
-    </ReactGA>
   )
 }
 
