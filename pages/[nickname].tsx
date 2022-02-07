@@ -14,7 +14,7 @@ import { User } from "types/user"
 
 import * as Styles from 'styles/Perfil'
 import { Flex } from "styles/Flex"
-import { Avatar, Icons } from "components"
+import { Avatar, Head, Icons } from "components"
 import { ReactGA } from "provider/ReactGA"
 
 const Perfil: NextLayoutComponentType<InferGetStaticPropsType<typeof getStaticProps>> = ({ data }) => {
@@ -24,6 +24,7 @@ const Perfil: NextLayoutComponentType<InferGetStaticPropsType<typeof getStaticPr
 
   return (
     <ReactGA>
+      <Head description="O que há de novo no twitter" title={`${data.username} (@${data.nick})`} />
       <Styles.Main>
         <Header title={(
           <Flex column>

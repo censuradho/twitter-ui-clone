@@ -6,7 +6,7 @@ import BgImage from 'assets/lohp_1302x955.png'
 import * as Styles from 'styles/index'
 import { Flex } from 'styles/Flex'
 
-import { ButtonAnchor } from 'components'
+import { ButtonAnchor, Head } from 'components'
 
 import { useTheme } from 'hooks'
 import { routePaths } from 'constants/routes'
@@ -17,6 +17,7 @@ const Welcome: NextLayoutComponentType = () => {
 
   return (
     <ReactGA>
+      <Head description="Twitter. É o que está acontecendo / Twitter" title="Sign In" />
       <Styles.Main>
         <Styles.SectionContainer>
           <section>

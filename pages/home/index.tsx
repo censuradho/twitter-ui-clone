@@ -7,7 +7,7 @@ import * as Styles from 'styles/Home'
 
 import { MainLayout } from 'Layout'
 
-import { ButtonIcon, TweetCard  } from 'components'
+import { ButtonIcon, Head, TweetCard  } from 'components'
 import { Header, Aside } from 'Layout/MainLayout/components'
 import { WhatsHappening, WhoFollow } from 'components/pages/home'
 
@@ -116,6 +116,7 @@ const Home: NextLayoutComponentType = () => {
 
   return (
     <ReactGA>
+      <Head description="O que há de novo no twitter" title="Página inicial" />
       <Styles.Main> 
         <Header 
           title={<LinkNext href={routePaths.home}><a>Página inicial</a></LinkNext>} 
