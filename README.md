@@ -25,6 +25,8 @@ I challenged myself to create some twitter interface screens using Next.js
 
 ## Installation
 
+on root directory:
+
 ```bash
 npm install
 ```
