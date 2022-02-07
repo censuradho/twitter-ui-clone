@@ -6,6 +6,7 @@ export const Container = styled.div`
   padding: .2rem 1.5rem;
   display: none;
   height: 100%;
+  overflow: auto;
   position: sticky;
   top: 0;
 
@@ -17,6 +18,26 @@ export const Container = styled.div`
     max-width: 32rem;
   }
 
+  /* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 `
 
 export const Wrapper = styled.div`
@@ -25,12 +46,19 @@ export const Wrapper = styled.div`
   display: none;
 
   @media (min-width: ${({ theme }) => theme.breakingPoints.large}) {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 `
 
 export const Sticked = styled.div`
   position: sticky;
   top: 0;
+`
+
+export const SearchBarContainer = styled.div`
+  padding-bottom: .5rem;
+  background: ${({ theme }) => theme.colors.background};
 `
 

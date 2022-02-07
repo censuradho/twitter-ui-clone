@@ -1,9 +1,7 @@
 import { ReactElement } from 'react'
-import { GetStaticProps, NextLayoutComponentType } from 'next'
+import { NextLayoutComponentType } from 'next'
 import LinkNext from 'next/link'
 import { useSelector } from 'react-redux'
-
-
 
 import * as Styles from 'styles/Home'
 
@@ -11,6 +9,8 @@ import { MainLayout } from 'Layout'
 
 import { ButtonIcon, TweetCard  } from 'components'
 import { Header, Aside } from 'Layout/MainLayout/components'
+import { WhatsHappening } from './components/WhatsHappening'
+import { WhoFollow } from './components/WhoFollow'
 
 import { routePaths } from 'constants/routes'
 
@@ -131,7 +131,8 @@ Home.getLayout = (page: ReactElement) => {
     <MainLayout>
       {page}
       <Aside>
-        <h1>.</h1>
+        <WhatsHappening />
+        <WhoFollow />
       </Aside>
     </MainLayout>
   )

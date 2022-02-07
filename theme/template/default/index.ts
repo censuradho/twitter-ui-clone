@@ -13,5 +13,8 @@ export const defaultTheme = {
     small: '31.25rem',
     mediumn: '54.9rem',
     large: '63rem'
+  },
+  borderRadius: {
+    sm: '1rem'
   }
 }

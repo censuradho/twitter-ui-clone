@@ -12,7 +12,9 @@ function BaseAside ({ children }: AsideProps) {
     <Styles.Container>
       <Styles.Wrapper>
         <Styles.Sticked>
-          <TextField placeholder="Buscar no Twitter"/>
+          <Styles.SearchBarContainer>
+            <TextField placeholder="Buscar no Twitter"/>
+          </Styles.SearchBarContainer>
         </Styles.Sticked>
         {children}
       </Styles.Wrapper>
