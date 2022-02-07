@@ -7,7 +7,7 @@
 
 # Twitter - UI Clone
 
-I challenged myself to create some twitter interface screens using React.js
+I challenged myself to create some twitter interface screens using Next.js
 
 🚧 is under development 🚧
 
