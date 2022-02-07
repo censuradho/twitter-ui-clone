@@ -9,8 +9,7 @@ import { MainLayout } from 'Layout'
 
 import { ButtonIcon, TweetCard  } from 'components'
 import { Header, Aside } from 'Layout/MainLayout/components'
-import { WhatsHappening } from './components/WhatsHappening'
-import { WhoFollow } from './components/WhoFollow'
+import { WhatsHappening, WhoFollow } from 'components/pages/home'
 
 import { routePaths } from 'constants/routes'
 
