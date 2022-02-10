@@ -9,8 +9,6 @@
 
 I challenged myself to create some twitter interface screens using Next.js
 
-🚧 is under development 🚧
-
 ## Screens
 
 - [x] Welcome
