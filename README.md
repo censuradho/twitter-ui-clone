@@ -27,10 +27,8 @@ on root directory:
 
 ```bash
 npm install
-```
 
-or...
+# or
 
-```bash
 yarn install
 ```
